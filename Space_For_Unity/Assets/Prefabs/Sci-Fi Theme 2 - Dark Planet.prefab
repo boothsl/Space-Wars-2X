@@ -1,0 +1,184 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: Sci-Fi Theme 2 - Dark Planet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47518421dac5a824d99145b9a35e4e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Dark Planet
+  modes:
+  - name: Unknown Beings - 1
+    stems:
+    - {fileID: 8300000, guid: 61e0a608c1921ac4dba45b72a1b0cd10, type: 3}
+  - name: Unknown Beings - 2
+    stems:
+    - {fileID: 8300000, guid: 6a3889c7102613a4a847d2b8015b41c0, type: 3}
+  - name: Unknown Beings - 3
+    stems:
+    - {fileID: 8300000, guid: ab42f73b847cb9a448eeedadd8f1496f, type: 3}
+  - name: Unknown Beings - 4
+    stems:
+    - {fileID: 8300000, guid: 61e0a608c1921ac4dba45b72a1b0cd10, type: 3}
+    - {fileID: 8300000, guid: 6a3889c7102613a4a847d2b8015b41c0, type: 3}
+  - name: Unknown Beings - 5
+    stems:
+    - {fileID: 8300000, guid: 61e0a608c1921ac4dba45b72a1b0cd10, type: 3}
+    - {fileID: 8300000, guid: ab42f73b847cb9a448eeedadd8f1496f, type: 3}
+  - name: Unknown Beings - 6
+    stems:
+    - {fileID: 8300000, guid: 6a3889c7102613a4a847d2b8015b41c0, type: 3}
+    - {fileID: 8300000, guid: ab42f73b847cb9a448eeedadd8f1496f, type: 3}
+  - name: Unknown Beings - Full
+    stems:
+    - {fileID: 8300000, guid: 61e0a608c1921ac4dba45b72a1b0cd10, type: 3}
+    - {fileID: 8300000, guid: 6a3889c7102613a4a847d2b8015b41c0, type: 3}
+    - {fileID: 8300000, guid: ab42f73b847cb9a448eeedadd8f1496f, type: 3}
+  - name: Chosen Ones - 1
+    stems:
+    - {fileID: 8300000, guid: e1bc585d83220a44dacdbd9014be88d5, type: 3}
+  - name: Chosen Ones - 2
+    stems:
+    - {fileID: 8300000, guid: 0bf24de1362a1b346bb35da7b1d4b43b, type: 3}
+  - name: Chosen Ones - 3
+    stems:
+    - {fileID: 8300000, guid: 96cad1e64cc9be741a1c94cd2c0e309d, type: 3}
+  - name: Chosen Ones - 4
+    stems:
+    - {fileID: 8300000, guid: e1bc585d83220a44dacdbd9014be88d5, type: 3}
+    - {fileID: 8300000, guid: 0bf24de1362a1b346bb35da7b1d4b43b, type: 3}
+  - name: Chosen Ones - 5
+    stems:
+    - {fileID: 8300000, guid: e1bc585d83220a44dacdbd9014be88d5, type: 3}
+    - {fileID: 8300000, guid: 96cad1e64cc9be741a1c94cd2c0e309d, type: 3}
+  - name: Chosen Ones - 6
+    stems:
+    - {fileID: 8300000, guid: 0bf24de1362a1b346bb35da7b1d4b43b, type: 3}
+    - {fileID: 8300000, guid: 96cad1e64cc9be741a1c94cd2c0e309d, type: 3}
+  - name: Chosen Ones - Full
+    stems:
+    - {fileID: 8300000, guid: e1bc585d83220a44dacdbd9014be88d5, type: 3}
+    - {fileID: 8300000, guid: 0bf24de1362a1b346bb35da7b1d4b43b, type: 3}
+    - {fileID: 8300000, guid: 96cad1e64cc9be741a1c94cd2c0e309d, type: 3}
+  - name: Allies Or Enemies - 1
+    stems:
+    - {fileID: 8300000, guid: a08e79ffc8ea05e4590454aedb47eb62, type: 3}
+  - name: Allies Or Enemies - 2
+    stems:
+    - {fileID: 8300000, guid: a3ab0e85e3d9b654bb0d021a9d3c1b3e, type: 3}
+  - name: Allies Or Enemies - 3
+    stems:
+    - {fileID: 8300000, guid: fcfb5601e8dd2c3438ce3b4cc966b6be, type: 3}
+  - name: Allies Or Enemies - 4
+    stems:
+    - {fileID: 8300000, guid: a08e79ffc8ea05e4590454aedb47eb62, type: 3}
+    - {fileID: 8300000, guid: a3ab0e85e3d9b654bb0d021a9d3c1b3e, type: 3}
+  - name: Allies Or Enemies - 5
+    stems:
+    - {fileID: 8300000, guid: a08e79ffc8ea05e4590454aedb47eb62, type: 3}
+    - {fileID: 8300000, guid: fcfb5601e8dd2c3438ce3b4cc966b6be, type: 3}
+  - name: Allies Or Enemies - 6
+    stems:
+    - {fileID: 8300000, guid: a3ab0e85e3d9b654bb0d021a9d3c1b3e, type: 3}
+    - {fileID: 8300000, guid: fcfb5601e8dd2c3438ce3b4cc966b6be, type: 3}
+  - name: Allies Or Enemies - Full
+    stems:
+    - {fileID: 8300000, guid: a08e79ffc8ea05e4590454aedb47eb62, type: 3}
+    - {fileID: 8300000, guid: a3ab0e85e3d9b654bb0d021a9d3c1b3e, type: 3}
+    - {fileID: 8300000, guid: fcfb5601e8dd2c3438ce3b4cc966b6be, type: 3}
+  - name: We All Have Secrets - 1
+    stems:
+    - {fileID: 8300000, guid: 2f9bf6d79cebaf841b0cdf529fa7099d, type: 3}
+  - name: We All Have Secrets - 2
+    stems:
+    - {fileID: 8300000, guid: 0ffda6c85d78c6a4da5c646ee77d387e, type: 3}
+  - name: We All Have Secrets - 3
+    stems:
+    - {fileID: 8300000, guid: c9309b26c27ccdc48a760beb093aca59, type: 3}
+  - name: We All Have Secrets - 4
+    stems:
+    - {fileID: 8300000, guid: 2f9bf6d79cebaf841b0cdf529fa7099d, type: 3}
+    - {fileID: 8300000, guid: 0ffda6c85d78c6a4da5c646ee77d387e, type: 3}
+  - name: We All Have Secrets - 5
+    stems:
+    - {fileID: 8300000, guid: 2f9bf6d79cebaf841b0cdf529fa7099d, type: 3}
+    - {fileID: 8300000, guid: c9309b26c27ccdc48a760beb093aca59, type: 3}
+  - name: We All Have Secrets - 6
+    stems:
+    - {fileID: 8300000, guid: 0ffda6c85d78c6a4da5c646ee77d387e, type: 3}
+    - {fileID: 8300000, guid: c9309b26c27ccdc48a760beb093aca59, type: 3}
+  - name: We All Have Secrets - Full
+    stems:
+    - {fileID: 8300000, guid: 2f9bf6d79cebaf841b0cdf529fa7099d, type: 3}
+    - {fileID: 8300000, guid: 0ffda6c85d78c6a4da5c646ee77d387e, type: 3}
+    - {fileID: 8300000, guid: c9309b26c27ccdc48a760beb093aca59, type: 3}
+  - name: The Mission - 1
+    stems:
+    - {fileID: 8300000, guid: 31c12599083261f418250a4016af5442, type: 3}
+  - name: The Mission - 2
+    stems:
+    - {fileID: 8300000, guid: 223f04a09f70b684994fc22ed8123b99, type: 3}
+  - name: The Mission - 3
+    stems:
+    - {fileID: 8300000, guid: d20e14f1985380a4bbd24a1c08fb930a, type: 3}
+  - name: The Mission - 4
+    stems:
+    - {fileID: 8300000, guid: 31c12599083261f418250a4016af5442, type: 3}
+    - {fileID: 8300000, guid: 223f04a09f70b684994fc22ed8123b99, type: 3}
+  - name: The Mission - 5
+    stems:
+    - {fileID: 8300000, guid: 31c12599083261f418250a4016af5442, type: 3}
+    - {fileID: 8300000, guid: d20e14f1985380a4bbd24a1c08fb930a, type: 3}
+  - name: The Mission - 6
+    stems:
+    - {fileID: 8300000, guid: 223f04a09f70b684994fc22ed8123b99, type: 3}
+    - {fileID: 8300000, guid: d20e14f1985380a4bbd24a1c08fb930a, type: 3}
+  - name: The Mission - Full
+    stems:
+    - {fileID: 8300000, guid: 31c12599083261f418250a4016af5442, type: 3}
+    - {fileID: 8300000, guid: 223f04a09f70b684994fc22ed8123b99, type: 3}
+    - {fileID: 8300000, guid: d20e14f1985380a4bbd24a1c08fb930a, type: 3}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

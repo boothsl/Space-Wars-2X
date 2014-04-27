@@ -1,0 +1,184 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: Sci-Fi Theme 1 - Galactic Uprising
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47518421dac5a824d99145b9a35e4e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Galactic Uprising
+  modes:
+  - name: Calm Before The Storm - 1
+    stems:
+    - {fileID: 8300000, guid: 831476bd404ad194f97225dd4d14ea76, type: 3}
+  - name: Calm Before The Storm - 2
+    stems:
+    - {fileID: 8300000, guid: f03974716390a07449a43034b933d8a6, type: 3}
+  - name: Calm Before The Storm - 3
+    stems:
+    - {fileID: 8300000, guid: 9e4e64e7e924a9d419a6161d5ff21558, type: 3}
+  - name: Calm Before The Storm - 4
+    stems:
+    - {fileID: 8300000, guid: 831476bd404ad194f97225dd4d14ea76, type: 3}
+    - {fileID: 8300000, guid: f03974716390a07449a43034b933d8a6, type: 3}
+  - name: Calm Before The Storm - 5
+    stems:
+    - {fileID: 8300000, guid: 831476bd404ad194f97225dd4d14ea76, type: 3}
+    - {fileID: 8300000, guid: 9e4e64e7e924a9d419a6161d5ff21558, type: 3}
+  - name: Calm Before The Storm - 6
+    stems:
+    - {fileID: 8300000, guid: f03974716390a07449a43034b933d8a6, type: 3}
+    - {fileID: 8300000, guid: 9e4e64e7e924a9d419a6161d5ff21558, type: 3}
+  - name: Calm Before The Storm - Full
+    stems:
+    - {fileID: 8300000, guid: 831476bd404ad194f97225dd4d14ea76, type: 3}
+    - {fileID: 8300000, guid: f03974716390a07449a43034b933d8a6, type: 3}
+    - {fileID: 8300000, guid: 9e4e64e7e924a9d419a6161d5ff21558, type: 3}
+  - name: Engage - 1
+    stems:
+    - {fileID: 8300000, guid: 3a54dbeea9545824381838528df4aafe, type: 3}
+  - name: Engage - 2
+    stems:
+    - {fileID: 8300000, guid: 0f9e082b6d0a5874e99cb315ce1a6306, type: 3}
+  - name: Engage - 3
+    stems:
+    - {fileID: 8300000, guid: 546d53e5e51e2bf4e83ae17769e09464, type: 3}
+  - name: Engage - 4
+    stems:
+    - {fileID: 8300000, guid: 3a54dbeea9545824381838528df4aafe, type: 3}
+    - {fileID: 8300000, guid: 0f9e082b6d0a5874e99cb315ce1a6306, type: 3}
+  - name: Engage - 5
+    stems:
+    - {fileID: 8300000, guid: 3a54dbeea9545824381838528df4aafe, type: 3}
+    - {fileID: 8300000, guid: 546d53e5e51e2bf4e83ae17769e09464, type: 3}
+  - name: Engage - 6
+    stems:
+    - {fileID: 8300000, guid: 0f9e082b6d0a5874e99cb315ce1a6306, type: 3}
+    - {fileID: 8300000, guid: 546d53e5e51e2bf4e83ae17769e09464, type: 3}
+  - name: Engage - Full
+    stems:
+    - {fileID: 8300000, guid: 3a54dbeea9545824381838528df4aafe, type: 3}
+    - {fileID: 8300000, guid: 0f9e082b6d0a5874e99cb315ce1a6306, type: 3}
+    - {fileID: 8300000, guid: 546d53e5e51e2bf4e83ae17769e09464, type: 3}
+  - name: Fall Back - 1
+    stems:
+    - {fileID: 8300000, guid: 7b69cd62d7bfb7d4c9f80ab55f6d4339, type: 3}
+  - name: Fall Back - 2
+    stems:
+    - {fileID: 8300000, guid: d1b140c1270ff8b4a90060e92c06378a, type: 3}
+  - name: Fall Back - 3
+    stems:
+    - {fileID: 8300000, guid: f8442c3f08aa45d45bee384951764d67, type: 3}
+  - name: Fall Back - 4
+    stems:
+    - {fileID: 8300000, guid: 7b69cd62d7bfb7d4c9f80ab55f6d4339, type: 3}
+    - {fileID: 8300000, guid: d1b140c1270ff8b4a90060e92c06378a, type: 3}
+  - name: Fall Back - 5
+    stems:
+    - {fileID: 8300000, guid: 7b69cd62d7bfb7d4c9f80ab55f6d4339, type: 3}
+    - {fileID: 8300000, guid: f8442c3f08aa45d45bee384951764d67, type: 3}
+  - name: Fall Back - 6
+    stems:
+    - {fileID: 8300000, guid: d1b140c1270ff8b4a90060e92c06378a, type: 3}
+    - {fileID: 8300000, guid: f8442c3f08aa45d45bee384951764d67, type: 3}
+  - name: Fall Back - Full
+    stems:
+    - {fileID: 8300000, guid: 7b69cd62d7bfb7d4c9f80ab55f6d4339, type: 3}
+    - {fileID: 8300000, guid: d1b140c1270ff8b4a90060e92c06378a, type: 3}
+    - {fileID: 8300000, guid: f8442c3f08aa45d45bee384951764d67, type: 3}
+  - name: For Honor - 1
+    stems:
+    - {fileID: 8300000, guid: 80e856c274103e941ad7d49dd5e7d442, type: 3}
+  - name: For Honor - 2
+    stems:
+    - {fileID: 8300000, guid: a19126677295db34f9c980aadcbec818, type: 3}
+  - name: For Honor - 3
+    stems:
+    - {fileID: 8300000, guid: e157898813458274fb5bfb1741224997, type: 3}
+  - name: For Honor - 4
+    stems:
+    - {fileID: 8300000, guid: 80e856c274103e941ad7d49dd5e7d442, type: 3}
+    - {fileID: 8300000, guid: a19126677295db34f9c980aadcbec818, type: 3}
+  - name: For Honor - 5
+    stems:
+    - {fileID: 8300000, guid: 80e856c274103e941ad7d49dd5e7d442, type: 3}
+    - {fileID: 8300000, guid: e157898813458274fb5bfb1741224997, type: 3}
+  - name: For Honor - 6
+    stems:
+    - {fileID: 8300000, guid: a19126677295db34f9c980aadcbec818, type: 3}
+    - {fileID: 8300000, guid: e157898813458274fb5bfb1741224997, type: 3}
+  - name: For Honor - Full
+    stems:
+    - {fileID: 8300000, guid: 80e856c274103e941ad7d49dd5e7d442, type: 3}
+    - {fileID: 8300000, guid: a19126677295db34f9c980aadcbec818, type: 3}
+    - {fileID: 8300000, guid: e157898813458274fb5bfb1741224997, type: 3}
+  - name: Reflections - 1
+    stems:
+    - {fileID: 8300000, guid: 22419a7c9dd6dae47a06816f99fb46a8, type: 3}
+  - name: Reflections - 2
+    stems:
+    - {fileID: 8300000, guid: 864e5d82cc07dc849864be484625ca19, type: 3}
+  - name: Reflections - 3
+    stems:
+    - {fileID: 8300000, guid: b7d06acd178c8134ca82776daf452f08, type: 3}
+  - name: Reflections - 4
+    stems:
+    - {fileID: 8300000, guid: 22419a7c9dd6dae47a06816f99fb46a8, type: 3}
+    - {fileID: 8300000, guid: 864e5d82cc07dc849864be484625ca19, type: 3}
+  - name: Reflections - 5
+    stems:
+    - {fileID: 8300000, guid: 22419a7c9dd6dae47a06816f99fb46a8, type: 3}
+    - {fileID: 8300000, guid: b7d06acd178c8134ca82776daf452f08, type: 3}
+  - name: Reflections - 6
+    stems:
+    - {fileID: 8300000, guid: 864e5d82cc07dc849864be484625ca19, type: 3}
+    - {fileID: 8300000, guid: b7d06acd178c8134ca82776daf452f08, type: 3}
+  - name: Reflections - Full
+    stems:
+    - {fileID: 8300000, guid: 22419a7c9dd6dae47a06816f99fb46a8, type: 3}
+    - {fileID: 8300000, guid: 864e5d82cc07dc849864be484625ca19, type: 3}
+    - {fileID: 8300000, guid: b7d06acd178c8134ca82776daf452f08, type: 3}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

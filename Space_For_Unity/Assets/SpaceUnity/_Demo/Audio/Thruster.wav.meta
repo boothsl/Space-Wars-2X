@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: e47f2fc33504cb44696c272f866f7c27
+labels:
+- thruster
+- thrusters
+- engine
+- jet
+- jets
+- flame
+- force
+- rocket
+- rockets
+- propulsion
+- propulsive
+- spacecraft
+- loop
+- seamless
+- wav
+- rocketengine
+- engines
+- space
+AudioImporter:
+  serializedVersion: 4
+  format: 0
+  quality: .354999989
+  stream: 1
+  3D: 1
+  forceToMono: 0
+  useHardware: 0
+  loopable: 0
+  userData: 

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!121 &12100000
+Flare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: LocalStarFlare-Orange-Medium
+  m_FlareTexture: {fileID: 2800000, guid: fd1ef0f128ad99f4f85defa6725b8b14, type: 3}
+  m_TextureLayout: 3
+  m_Elements:
+  - m_ImageIndex: 0
+    m_Position: 0
+    m_Size: 25
+    m_Color: {r: .891608357, g: .323652446, b: .00665378803, a: 0}
+    m_UseLightColor: 1
+    m_Rotate: 0
+    m_Zoom: 1
+    m_Fade: 1
+  - m_ImageIndex: 3
+    m_Position: 0
+    m_Size: 15
+    m_Color: {r: .0384615399, g: .0378018059, b: .0321469605, a: 0}
+    m_UseLightColor: 1
+    m_Rotate: 0
+    m_Zoom: 1
+    m_Fade: 1
+  - m_ImageIndex: 1
+    m_Position: 0
+    m_Size: 22
+    m_Color: {r: .12937063, g: .127151534, b: .108130679, a: 0}
+    m_UseLightColor: 1
+    m_Rotate: 0
+    m_Zoom: 1
+    m_Fade: 1
+  m_UseFog: 1

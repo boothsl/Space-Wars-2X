@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 1696868e1c668f84daec3e08a2ee611e
+labels:
+- brightness-bright
+- brightness-very_bright
+- color-blue
+- color-green
+- style-cloudy
+- complexity-high
+NativeFormatImporter:
+  userData: 

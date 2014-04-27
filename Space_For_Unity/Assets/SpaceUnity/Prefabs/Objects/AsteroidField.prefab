@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: AsteroidField
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f083edd1b7d47124f8ebaaa3c4946df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  polyCount: 0
+  polyCountCollider: 2
+  prefabAsteroids:
+  - {fileID: 400000, guid: 5b77250c2e506ae44aa0a22e5d82e686, type: 2}
+  - {fileID: 400000, guid: 46405e8849059964aa5c939ec12e7e28, type: 2}
+  - {fileID: 400000, guid: d1e607029cc89444391ee3b980a32a75, type: 2}
+  materialVeryCommon:
+  - {fileID: 2100000, guid: 8b8e0519ed2dd6b41a54ab0001765d78, type: 2}
+  - {fileID: 2100000, guid: 35d7a25f79c36a141864172989a3bf70, type: 2}
+  materialCommon:
+  - {fileID: 2100000, guid: 2c91a6947fdaa89489761bb4a0436a3f, type: 2}
+  materialRare:
+  - {fileID: 2100000, guid: 77de766a2fb10c94b80e51b18684c79d, type: 2}
+  materialVeryRare:
+  - {fileID: 2100000, guid: 948c5032f51c2a14e81b4c62ce3d074c, type: 2}
+  range: 20000
+  maxAsteroids: 1000
+  respawnDestroyedAsteroids: 1
+  respawnIfOutOfRange: 1
+  distanceSpawn: .949999988
+  minAsteroidScale: .0531914905
+  maxAsteroidScale: 1
+  scaleMultiplier: 1000
+  isRigidbody: 0
+  minAsteroidRotationSpeed: 0
+  maxAsteroidRotationSpeed: 1
+  rotationSpeedMultiplier: 1
+  minAsteroidDriftSpeed: 0
+  maxAsteroidDriftSpeed: 20
+  driftSpeedMultiplier: 1
+  mass: 10
+  minAsteroidAngularVelocity: 0
+  maxAsteroidAngularVelocity: 1
+  angularVelocityMultiplier: .100000001
+  minAsteroidVelocity: 0
+  maxAsteroidVelocity: 1
+  velocityMultiplier: 1
+  fadeAsteroids: 1
+  distanceFade: .949999988
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

@@ -1,0 +1,171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: Sci-Fi Theme 3 - New Worlds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47518421dac5a824d99145b9a35e4e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: New Worlds
+  modes:
+  - name: Eclipse Of Three - 1
+    stems:
+    - {fileID: 8300000, guid: 2ebd433daa2245840a34fbf3ec3956e9, type: 3}
+  - name: Eclipse Of Three - 2
+    stems:
+    - {fileID: 8300000, guid: 41fd90cc77538294db5cca0a3dfb53fb, type: 3}
+  - name: Eclipse Of Three - Full
+    stems:
+    - {fileID: 8300000, guid: 2ebd433daa2245840a34fbf3ec3956e9, type: 3}
+    - {fileID: 8300000, guid: 41fd90cc77538294db5cca0a3dfb53fb, type: 3}
+  - name: Carbon - 1
+    stems:
+    - {fileID: 8300000, guid: 527778e8ef922f34eb311ec451bf4e76, type: 3}
+    - {fileID: 8300000, guid: 4c070857ca245f04aabd918e9b688824, type: 3}
+  - name: Carbon - 2
+    stems:
+    - {fileID: 8300000, guid: 527778e8ef922f34eb311ec451bf4e76, type: 3}
+    - {fileID: 8300000, guid: 89659d7e46e05a844871ee3e894fc2af, type: 3}
+  - name: Carbon - 3
+    stems:
+    - {fileID: 8300000, guid: 4c070857ca245f04aabd918e9b688824, type: 3}
+    - {fileID: 8300000, guid: 89659d7e46e05a844871ee3e894fc2af, type: 3}
+  - name: Carbon - 4
+    stems:
+    - {fileID: 8300000, guid: 527778e8ef922f34eb311ec451bf4e76, type: 3}
+    - {fileID: 8300000, guid: 4c070857ca245f04aabd918e9b688824, type: 3}
+  - name: Carbon - 5
+    stems:
+    - {fileID: 8300000, guid: 527778e8ef922f34eb311ec451bf4e76, type: 3}
+    - {fileID: 8300000, guid: 89659d7e46e05a844871ee3e894fc2af, type: 3}
+  - name: Carbon - 6
+    stems:
+    - {fileID: 8300000, guid: 4c070857ca245f04aabd918e9b688824, type: 3}
+    - {fileID: 8300000, guid: 89659d7e46e05a844871ee3e894fc2af, type: 3}
+  - name: Carbon - Full
+    stems:
+    - {fileID: 8300000, guid: 527778e8ef922f34eb311ec451bf4e76, type: 3}
+    - {fileID: 8300000, guid: 4c070857ca245f04aabd918e9b688824, type: 3}
+    - {fileID: 8300000, guid: 89659d7e46e05a844871ee3e894fc2af, type: 3}
+  - name: Understanding The Elements - 1
+    stems:
+    - {fileID: 8300000, guid: 5543ba9691a13c040a243e89870f8a6a, type: 3}
+  - name: Understanding The Elements - 2
+    stems:
+    - {fileID: 8300000, guid: 344120ee002c7ac47a0dd962fbd36da4, type: 3}
+  - name: Understanding The Elements - 3
+    stems:
+    - {fileID: 8300000, guid: 89daf36cad27f5d4b989fd489528d0ec, type: 3}
+  - name: Understanding The Elements - 4
+    stems:
+    - {fileID: 8300000, guid: 5543ba9691a13c040a243e89870f8a6a, type: 3}
+    - {fileID: 8300000, guid: 344120ee002c7ac47a0dd962fbd36da4, type: 3}
+  - name: Understanding The Elements - 5
+    stems:
+    - {fileID: 8300000, guid: 5543ba9691a13c040a243e89870f8a6a, type: 3}
+    - {fileID: 8300000, guid: 89daf36cad27f5d4b989fd489528d0ec, type: 3}
+  - name: Understanding The Elements - 6
+    stems:
+    - {fileID: 8300000, guid: 344120ee002c7ac47a0dd962fbd36da4, type: 3}
+    - {fileID: 8300000, guid: 89daf36cad27f5d4b989fd489528d0ec, type: 3}
+  - name: Understanding The Elements - Full
+    stems:
+    - {fileID: 8300000, guid: 5543ba9691a13c040a243e89870f8a6a, type: 3}
+    - {fileID: 8300000, guid: 344120ee002c7ac47a0dd962fbd36da4, type: 3}
+    - {fileID: 8300000, guid: 89daf36cad27f5d4b989fd489528d0ec, type: 3}
+  - name: Lost Star - 1
+    stems:
+    - {fileID: 8300000, guid: a8ad9409b1a4aa646989c9c02df344d0, type: 3}
+  - name: Lost Star - 2
+    stems:
+    - {fileID: 8300000, guid: c621dcb4db6f24445b1a03c8baf86e2e, type: 3}
+  - name: Lost Star - 3
+    stems:
+    - {fileID: 8300000, guid: 850cc4ca7e8b8e24d8af3098d514e1c3, type: 3}
+  - name: Lost Star - 4
+    stems:
+    - {fileID: 8300000, guid: a8ad9409b1a4aa646989c9c02df344d0, type: 3}
+    - {fileID: 8300000, guid: c621dcb4db6f24445b1a03c8baf86e2e, type: 3}
+  - name: Lost Star - 5
+    stems:
+    - {fileID: 8300000, guid: a8ad9409b1a4aa646989c9c02df344d0, type: 3}
+    - {fileID: 8300000, guid: 850cc4ca7e8b8e24d8af3098d514e1c3, type: 3}
+  - name: Lost Star - 6
+    stems:
+    - {fileID: 8300000, guid: c621dcb4db6f24445b1a03c8baf86e2e, type: 3}
+    - {fileID: 8300000, guid: 850cc4ca7e8b8e24d8af3098d514e1c3, type: 3}
+  - name: Lost Star - Full
+    stems:
+    - {fileID: 8300000, guid: a8ad9409b1a4aa646989c9c02df344d0, type: 3}
+    - {fileID: 8300000, guid: c621dcb4db6f24445b1a03c8baf86e2e, type: 3}
+    - {fileID: 8300000, guid: 850cc4ca7e8b8e24d8af3098d514e1c3, type: 3}
+  - name: New Home - 1
+    stems:
+    - {fileID: 8300000, guid: e80d97b7fc722df4782786917dabc939, type: 3}
+  - name: New Home - 2
+    stems:
+    - {fileID: 8300000, guid: 38453a2a38bf6de4ebc44526b8a932e7, type: 3}
+  - name: New Home - 3
+    stems:
+    - {fileID: 8300000, guid: 658765dd5d18b6f41ae15b7002b73dc8, type: 3}
+  - name: New Home - 4
+    stems:
+    - {fileID: 8300000, guid: e80d97b7fc722df4782786917dabc939, type: 3}
+    - {fileID: 8300000, guid: 38453a2a38bf6de4ebc44526b8a932e7, type: 3}
+  - name: New Home - 5
+    stems:
+    - {fileID: 8300000, guid: e80d97b7fc722df4782786917dabc939, type: 3}
+    - {fileID: 8300000, guid: 658765dd5d18b6f41ae15b7002b73dc8, type: 3}
+  - name: New Home - 6
+    stems:
+    - {fileID: 8300000, guid: 38453a2a38bf6de4ebc44526b8a932e7, type: 3}
+    - {fileID: 8300000, guid: 658765dd5d18b6f41ae15b7002b73dc8, type: 3}
+  - name: New Home - Full
+    stems:
+    - {fileID: 8300000, guid: e80d97b7fc722df4782786917dabc939, type: 3}
+    - {fileID: 8300000, guid: 38453a2a38bf6de4ebc44526b8a932e7, type: 3}
+    - {fileID: 8300000, guid: 658765dd5d18b6f41ae15b7002b73dc8, type: 3}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

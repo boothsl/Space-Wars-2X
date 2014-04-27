@@ -1,0 +1,82 @@
+Thank You for purchasing "SPACE for Unity" (Version 1.03)
+
+Please refer to the documentation found in SpaceUnity/_Documentation to begin
+creating space scenes.
+
+QUICKSTART:
+
+1. Load the template scene: SpaceUnity/_Scenes/Template
+2. Go to Window | Space Scene Construcition Kit
+3. Click "Create Space Scene Prefab"
+
+
+
+
+*** WHAT'S NEW? ***
+VERSION 1.03
+
+ FIXES
+ 
+  * Removed rewrote deprecated 4.x code in scripts 
+  
+  * Added compile dependent code to ensure Unity 4.1, 4.2, and 4.3 executes code
+  
+  * Fixed problem with asteroids not being created after build if "fading" was enabled
+      (Added new shader SpaceUnity/AsteroidTransparent located in a Resources folder to 
+      ensure it is always included during the build process)
+      
+  * Fixed flickering of atmospheres in Unity 4.1 and above
+      Fixed by changing point lights distance from 100000 to 20000 (precision issue)
+      
+  * Fixed memory leak of explosions never being removed
+      Added SU_Explosion.cs script that destroys gameobject after delay
+
+VERSION 1.02
+  
+ FIXES
+
+ * Changed name to SPACE for Unity due to Unity Asset Store policy conflict.
+
+ * Prefixed all scripts with “SU_” to avoid naming conflicts.
+
+ * Prefab: SpaceUnity/Prefabs/SpaceSceneElements/LocalStar<Large/Medium/Small>
+     Flickering Planets in Unity 4
+       Changed Range of child Point light from 1E+10 to 100000 because it made
+       the planet textures flicker in Unity v4. (Unity 3.5 supported “Infinity”
+       for point lights which didn’t work in 4.0 and apparently too high of a
+       range causes flickering, presumably due to some floating point issues.)
+       Note: If you have created Local Stars in your scene with broken prefab
+       connection you will need to set these values manually as well on scenes
+       you created.
+
+     Missing white star disc after disappearing out of view in Unity 4
+       The white star disc disappeared in Unity v4 after the local star had
+       once been out of view. This was not the case in v3.5. On child
+       ParticleSystem-Disc, changed Duration and Lifetime from Infinity to 100
+       and set particle system to looping to looping which keeps the disc
+       visible at all times.
+
+ * Script: SU_SpaceSceneSwitcher.cs
+    Added compiler version verification to use SetActive instead of deprecated
+    command SetActiveRecursively in Unity v4
+
+ * Scene: "Demo - Planet Climates"
+    Enabled gameObjects MeshEngines and MeshSpaceship that were accidentally
+    disabled before.
+   
+ * Planet Material: "Planet-Desert-OrangeWithImpacts"
+    Added missing label "atmosphere-brown-medium" because planets of this type
+    didn't receive an atmosphere when created due to the missing label on the 
+    asset.
+
+ * Scene: "Demo - Colorized Red" 
+    Set background stars (which was missing) texture for SpaceScene camera.
+
+ * Prefabs: _Demo/Prefabs/SpaceScene1 & SpaceScene2
+    Added background stars (which was missing) in SpaceScene1.
+    Replaced local stars which were not rendering prominence and cascades.
+
+VERSION 1.01 
+
+ First public release.
+
