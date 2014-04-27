@@ -31,6 +31,7 @@ using System.Collections;
 public class SU_Spaceship : MonoBehaviour {
 
 	public bool is_top_player;
+	public bool is_menu_ship;
 	
 	// Array of thrusters attached to the spaceship
 	public SU_Thruster[] thrusters;
@@ -102,6 +103,7 @@ public class SU_Spaceship : MonoBehaviour {
 			// Play sound effect when firing
 			if (soundEffectFire != null) {
 				audio.PlayOneShot(soundEffectFire);
+
 			}
 		}		
 	}
