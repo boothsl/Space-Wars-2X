@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour {
 	public string targetScene;
 	public GUIStyle startGuiStyle;
 
+	public GameObject instructionsP1;
 	public GameObject instructions;
 	public GameObject credits;
 	public GameObject aboutUs;
@@ -20,21 +21,24 @@ public class MainMenu : MonoBehaviour {
 		if (GUI.Button(new Rect(x - hw, y - hh, width, height), text, the_style)) {
 			switch(action) {
 			case 0:
-				Application.LoadLevel(targetScene);
-				break;
-			case 1:
-				aboutUs.SetActive(true);
+				instructionsP1.SetActive(true);
 				instructions.SetActive(false);
 				credits.SetActive(false);
+				aboutUs.SetActive(false);
+				break;
+			case 1:
+				Application.LoadLevel(targetScene);
 				break;
 			case 2:
 				instructions.SetActive(true);
+				instructionsP1.SetActive(false);
 				credits.SetActive(false);
 				aboutUs.SetActive(false);
 				break;
 			case 3:
 				credits.SetActive(true);
 				instructions.SetActive(false);
+				instructionsP1.SetActive(false);
 				aboutUs.SetActive(false);
 				break;
 			}
@@ -42,13 +46,12 @@ public class MainMenu : MonoBehaviour {
 
 	}
 
-
 	void OnGUI() {
 		float width = Screen.width;
 		float height = Screen.height;
 
-		CreateButton (width / 4f, height * 0.7f, button_width, button_height, "2-Player", startGuiStyle, 0);
-		CreateButton (width / 4f, height * 0.85f, button_width, button_height, "About Us", startGuiStyle, 1);
+		CreateButton (width / 4f, height * 0.7f, button_width, button_height, "1-Player", startGuiStyle, 0);
+		CreateButton (width / 4f, height * 0.85f, button_width, button_height, "2-Player", startGuiStyle, 1);
 		CreateButton (width * 3f / 4f, height * 0.7f, button_width, button_height, "How to Play", startGuiStyle, 2);
 		CreateButton (width * 3f / 4f, height * 0.85f, button_width, button_height, "Credits", startGuiStyle, 3);
 

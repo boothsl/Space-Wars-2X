@@ -6333,7 +6333,7 @@ MonoBehaviour:
   chaseHeight: 10
   followDamping: .300000012
   lookAtDamping: 4
-  freezeKey: 304
+  freezeKey: 104
 --- !u!82 &558152036
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14155,7 +14155,7 @@ MonoBehaviour:
   chaseHeight: 10
   followDamping: .300000012
   lookAtDamping: 4
-  freezeKey: 304
+  freezeKey: 103
 --- !u!81 &1068940161
 AudioListener:
   m_ObjectHideFlags: 0
@@ -17733,6 +17733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   is_top_player: 1
+  is_menu_ship: 0
   thrusters:
   - {fileID: 1293981397}
   - {fileID: 928988750}
@@ -18062,6 +18063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   is_top_player: 0
+  is_menu_ship: 0
   thrusters:
   - {fileID: 2056449181}
   - {fileID: 963170018}

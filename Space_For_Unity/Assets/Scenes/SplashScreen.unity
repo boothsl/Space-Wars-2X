@@ -1395,7 +1395,7 @@ GameObject:
   - 4: {fileID: 174643652}
   - 132: {fileID: 174643653}
   m_Layer: 0
-  m_Name: Instructions
+  m_Name: Instructions 1Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1420,13 +1420,8 @@ GUIText:
   m_GameObject: {fileID: 174643651}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 'Alt = Thrust                                Ctrl = Fire
-
-
-    Player 1 = WASD            Player 2 = Arrow Keys
-
-
-    Kill the other player!!!'
+  m_Text: "HOW TO PLAY\n\nShift = Thrust                                Space = Fire\n\nMove
+    = WASD        \n\n\n\nPress space to begin."
   m_Anchor: 1
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
@@ -1465,7 +1460,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400040, guid: 15974b17e99c9944881f2cc4684e5bda, type: 2}
   m_PrefabInternal: {fileID: 70674544}
   m_GameObject: {fileID: 175711098}
-  m_LocalRotation: {x: .437361151, y: -.645016134, z: .144105315, w: .609838545}
+  m_LocalRotation: {x: .437361181, y: -.645016193, z: .14410533, w: .609838605}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: .99999994}
   m_Children: []
@@ -2056,6 +2051,7 @@ GameObject:
   - 114: {fileID: 473382279}
   - 114: {fileID: 473382280}
   - 82: {fileID: 473382281}
+  - 114: {fileID: 473382282}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2199,7 +2195,8 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  instructions: {fileID: 174643651}
+  instructionsP1: {fileID: 174643651}
+  instructions: {fileID: 1487632548}
   credits: {fileID: 1245151928}
   aboutUs: {fileID: 448234678}
 --- !u!114 &473382279
@@ -2220,7 +2217,7 @@ MonoBehaviour:
   chaseHeight: 10
   followDamping: 13
   lookAtDamping: 4
-  freezeKey: 304
+  freezeKey: 103
 --- !u!114 &473382280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2292,6 +2289,20 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &473382282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 473382272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b73dadc01194f0c857fd36325f130c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 473382272}
+  instructionsP1: {fileID: 174643651}
+  gameTitle: {fileID: 428914698}
 --- !u!1 &483714823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2473,6 +2484,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 66f6414ccb9d392448b3dce81fec6626, type: 2}
       propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 66f6414ccb9d392448b3dce81fec6626, type: 2}
+      propertyPath: is_top_player
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6838,7 +6853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33cded4ff31f8b64593dc0fc3975a6c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  is_top_player: 0
+  is_top_player: 1
   is_menu_ship: 0
   thrusters:
   - {fileID: 1282540416}
@@ -6882,6 +6897,67 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!1 &1487632548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1487632550}
+  - 132: {fileID: 1487632549}
+  m_Layer: 0
+  m_Name: Instructions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!132 &1487632549
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1487632548}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 'HOW TO PLAY
+
+
+    Shift = Thrust                                Space = Fire
+
+
+    Player 1 = WASD            Player 2 = Arrow Keys
+
+
+
+
+    Kill the other player!!!'
+  m_Anchor: 1
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 124184272d4f5419ba878427f9193082, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 20
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294952960
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!4 &1487632550
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1487632548}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .624625504, z: 0}
+  m_LocalScale: {x: .870023012, y: .749251008, z: 996.173096}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &1648522399
 GameObject:
   m_ObjectHideFlags: 0
