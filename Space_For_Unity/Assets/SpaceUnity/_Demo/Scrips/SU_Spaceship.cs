@@ -32,7 +32,9 @@ public class SU_Spaceship : MonoBehaviour {
 
 	public bool is_top_player;
 	public bool is_menu_ship;
-	
+
+
+	public string targetScene;
 	// Array of thrusters attached to the spaceship
 	public SU_Thruster[] thrusters;
 	// Specify the roll rate (multiplier for rolling the ship when steering left/right)	
@@ -105,7 +107,11 @@ public class SU_Spaceship : MonoBehaviour {
 				audio.PlayOneShot(soundEffectFire);
 
 			}
-		}		
+		}
+		//Return to main menu on Escape (or other) key event
+		if (Input.GetKey (KeyCode.Escape)) {
+			Application.LoadLevel(targetScene);
+		}
 	}
 
 	void FixedUpdate () {
