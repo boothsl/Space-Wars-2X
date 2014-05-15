@@ -21,7 +21,12 @@ public class MainMenu : MonoBehaviour {
 		if (GUI.Button(new Rect(x - hw, y - hh, width, height), text, the_style)) {
 			switch(action) {
 			case 0:
-				instructionsP1.SetActive(true);
+				if (instructionsP1.activeInHierarchy){
+					instructionsP1.SetActive(false);
+				}
+				else {
+					instructionsP1.SetActive(true);
+				}
 				instructions.SetActive(false);
 				credits.SetActive(false);
 				aboutUs.SetActive(false);
@@ -30,13 +35,23 @@ public class MainMenu : MonoBehaviour {
 				Application.LoadLevel(targetScene);
 				break;
 			case 2:
-				instructions.SetActive(true);
+				if (instructions.activeInHierarchy) {
+					instructions.SetActive(false);
+				}
+				else {
+					instructions.SetActive(true);
+				}
 				instructionsP1.SetActive(false);
 				credits.SetActive(false);
 				aboutUs.SetActive(false);
 				break;
 			case 3:
-				credits.SetActive(true);
+				if (credits.activeInHierarchy) {
+					credits.SetActive(false);
+				}
+				else {
+					credits.SetActive(true);
+				}
 				instructions.SetActive(false);
 				instructionsP1.SetActive(false);
 				aboutUs.SetActive(false);
