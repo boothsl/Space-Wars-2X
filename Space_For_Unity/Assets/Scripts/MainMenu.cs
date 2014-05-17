@@ -9,11 +9,13 @@ public class MainMenu : MonoBehaviour {
 
 	public string targetScene;
 	public GUIStyle startGuiStyle;
+	//public GUIStyle menuOptionStyle;
 
 	public GameObject instructionsP1;
 	public GameObject instructions;
 	public GameObject credits;
-	public GameObject aboutUs;
+
+
 
 	void CreateButton(float x, float y, float width, float height, string text, GUIStyle the_style, int action) {
 		float hw = width / 2;
@@ -29,7 +31,6 @@ public class MainMenu : MonoBehaviour {
 				}
 				instructions.SetActive(false);
 				credits.SetActive(false);
-				aboutUs.SetActive(false);
 				break;
 			case 1:
 				Application.LoadLevel(targetScene);
@@ -41,9 +42,9 @@ public class MainMenu : MonoBehaviour {
 				else {
 					instructions.SetActive(true);
 				}
+
 				instructionsP1.SetActive(false);
 				credits.SetActive(false);
-				aboutUs.SetActive(false);
 				break;
 			case 3:
 				if (credits.activeInHierarchy) {
@@ -54,7 +55,6 @@ public class MainMenu : MonoBehaviour {
 				}
 				instructions.SetActive(false);
 				instructionsP1.SetActive(false);
-				aboutUs.SetActive(false);
 				break;
 			}
 		}
@@ -69,6 +69,5 @@ public class MainMenu : MonoBehaviour {
 		CreateButton (width / 4f, height * 0.85f, button_width, button_height, "2-Player", startGuiStyle, 1);
 		CreateButton (width * 3f / 4f, height * 0.7f, button_width, button_height, "How to Play", startGuiStyle, 2);
 		CreateButton (width * 3f / 4f, height * 0.85f, button_width, button_height, "Credits", startGuiStyle, 3);
-
 	}
 }
