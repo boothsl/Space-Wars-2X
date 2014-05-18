@@ -1,36 +1,9 @@
-﻿// Spaceship C# Script (version: 1.02)
-// SPACE UNITY - Space Scene Construction Kit
-// http://www.spaceunity.com
-// (c) 2013 Stefan Persson
-
-// DESCRIPTION:
-// Thruster, steering and weapon control script for Spaceship prefab.
-
-// INSTRUCTIONS:
-// This script is attached to the Spaceship demo prefab. Configure parameters to suit your needs.
-
-// PARAMETERS:
-//  thrusters			(Thruster array containing reference to thrusters prefabs attached to the ship for propulsion)
-//  rollRate			(multiplier for rolling the ship when steering left/right)	
-//  yawRate				(multiplier for rudder/steering the ship when steering left/right)
-//  pitchRate			(multiplier for pitch when steering up/down)
-//  weaponMountPoints	(Vector3 array for mount points relative to ship where weapons will fire from)
-//  laserShotPrefab		(reference to Laser Shot prefab, i.e. the laser bullet prefab to be instanitated)
-//  soundEffectFire		(sound effect audio clip to be played when firing weapon)
-
-// HINTS:
-// The propulsion force of the thruster is configured for each attached thruster in the Thruster script.
-
-// Version History
-// 1.02 - Prefixed with SU_Spaceship to avoid naming conflicts.
-// 1.01 - Initial Release.
+﻿
 
 using UnityEngine;
 using System.Collections;
 
-public class Spaceship : MonoBehaviour {
-
-	public int team = 1;
+public class Spaceship : BaseCharacter {
 
 	public SU_Thruster[] thrusters;
 	// Specify the roll rate (multiplier for rolling the ship when steering left/right)	
@@ -49,7 +22,6 @@ public class Spaceship : MonoBehaviour {
 	// Private variables
 	private Rigidbody _cacheRigidbody;
 	
-	
 	void Start () {		
 		// Ensure that the thrusters in the array have been linked properly
 		foreach (SU_Thruster _thruster in thrusters) {
@@ -62,6 +34,20 @@ public class Spaceship : MonoBehaviour {
 		_cacheRigidbody = rigidbody;
 		if (_cacheRigidbody == null) {
 			Debug.LogError("Spaceship has no rigidbody - the thruster scripts will fail. Add rigidbody component to the spaceship.");
+		}
+	}
+
+	public void StartThrusters()
+	{
+		foreach (SU_Thruster thruster in thrusters) {
+			thruster.StartThruster();
+		}
+	}
+
+	public void StopThrusters()
+	{
+		foreach (SU_Thruster thruster in thrusters) {
+			thruster.StopThruster();
 		}
 	}
 
