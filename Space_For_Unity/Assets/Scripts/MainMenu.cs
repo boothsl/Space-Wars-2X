@@ -14,7 +14,8 @@ public class MainMenu : MonoBehaviour {
 	public GameObject instructionsP1;
 	public GameObject instructions;
 	public GameObject credits;
-
+	public GameObject startServerGUI;
+	public GameObject startClientGUI;
 
 
 	void CreateButton(float x, float y, float width, float height, string text, GUIStyle the_style, int action) {
@@ -56,6 +57,14 @@ public class MainMenu : MonoBehaviour {
 				instructions.SetActive(false);
 				instructionsP1.SetActive(false);
 				break;
+			case 4:
+				startServerGUI.SetActive(true);
+				this.enabled = false;
+				break;
+			case 5:
+				startClientGUI.SetActive(true);
+				this.enabled = false;
+				break;
 			}
 		}
 
@@ -65,9 +74,11 @@ public class MainMenu : MonoBehaviour {
 		float width = Screen.width;
 		float height = Screen.height;
 
-		CreateButton (width / 4f, height * 0.7f, button_width, button_height, "1-Player", startGuiStyle, 0);
-		CreateButton (width / 4f, height * 0.85f, button_width, button_height, "2-Player", startGuiStyle, 1);
-		CreateButton (width * 3f / 4f, height * 0.7f, button_width, button_height, "How to Play", startGuiStyle, 2);
-		CreateButton (width * 3f / 4f, height * 0.85f, button_width, button_height, "Credits", startGuiStyle, 3);
+		CreateButton (width / 4f, height * 0.65f, button_width, button_height, "1-Player", startGuiStyle, 0);
+		CreateButton (width / 4f, height * 0.80f, button_width, button_height, "2-Player", startGuiStyle, 1);
+		CreateButton (width * 3f / 4f, height * 0.65f, button_width, button_height, "How to Play", startGuiStyle, 2);
+		CreateButton (width * 3f / 4f, height * 0.8f, button_width, button_height, "Credits", startGuiStyle, 3);
+		CreateButton (width / 4f, height * 0.95f, button_width, button_height, "Start Server", startGuiStyle, 4);
+		CreateButton (width * 3f / 4f, height * 0.95f, button_width, button_height, "Join Server", startGuiStyle, 5);
 	}
 }
