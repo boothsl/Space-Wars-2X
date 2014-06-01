@@ -78,21 +78,21 @@ public class SU_Spaceship : MonoBehaviour {
 		}
 
 
-		// Start all thrusters when pressing Fire 1
+		// Slow all thrusters when pressing Fire 1
 		if (Input.GetButtonDown(fire1_string)) {		
-			foreach (SU_Thruster _thruster in thrusters) {
-				_thruster.StartThruster();
-			}
-		}
-		// Stop all thrusters when releasing Fire 1
-		if (Input.GetButtonUp(fire1_string)) {		
 			foreach (SU_Thruster _thruster in thrusters) {
 				_thruster.StopThruster();
 			}
 		}
+		// Start all thrusters when releasing Fire 1
+		if (Input.GetButtonUp(fire1_string)) {		
+			foreach (SU_Thruster _thruster in thrusters) {
+				_thruster.StartThruster();
+			}
+		}
 		
 		if (Input.GetButtonDown(fire2_string)) {
-			// Itereate through each weapon mount point Vector3 in array
+			// Iterate through each weapon mount point Vector3 in array
 			foreach (Vector3 _wmp in weaponMountPoints) {
 				// Calculate where the position is in world space for the mount point
 				Vector3 _pos = transform.position + transform.right * _wmp.x + transform.up * _wmp.y + transform.forward * _wmp.z;

@@ -25,6 +25,8 @@ using System.Collections;
 public class SU_Thruster : MonoBehaviour {
 	// Force of individual thrusters
 	public float thrusterForce = 10000;
+	// Force of trusters when not active???
+	public float inactiveThrusterForce = 5000;
 	// Whether or not to add force at position which introduces torque, use with care...
 	public bool addForceAtPosition = false;
 	// Sound effect volume of thruster
@@ -102,6 +104,7 @@ public class SU_Thruster : MonoBehaviour {
 			if (_cacheParticleSystem != null) {	
 				// Enable emission of thruster particles
 				_cacheParticleSystem.enableEmission = true;
+				_cacheParticleSystem.startLifetime = 2f;
 			}		
 		} else {
 			// The thruster is not active
@@ -116,7 +119,8 @@ public class SU_Thruster : MonoBehaviour {
 			// If the particle system is intact...
 			if (_cacheParticleSystem != null) {				
 				// Stop emission of thruster particles
-				_cacheParticleSystem.enableEmission = false;				
+				_cacheParticleSystem.enableEmission = true;
+				_cacheParticleSystem.startLifetime = 1f;
 			}
 			
 		}
@@ -134,6 +138,16 @@ public class SU_Thruster : MonoBehaviour {
 				// Add force without rotational torque
 				_cacheParentRigidbody.AddRelativeForce (Vector3.forward * thrusterForce);				
 			}
-		}		
+		}
+		// If thruster is inactive (in slow mode)...
+		else if (!_isActive) {
+			if (addForceAtPosition) {
+				// Add force relative to the position on the parent object which will also apply rotational torque
+				_cacheParentRigidbody.AddForceAtPosition (_cacheTransform.up * inactiveThrusterForce, _cacheTransform.position);
+			} else {
+				// Add force without rotational torque
+				_cacheParentRigidbody.AddRelativeForce (Vector3.forward * inactiveThrusterForce);				
+			}
+		}
 	}
 }
