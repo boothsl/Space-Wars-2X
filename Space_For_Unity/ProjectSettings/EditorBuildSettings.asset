@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Space_Scene_Dogfight_GameJam.unity
   - enabled: 1
     path: Assets/Scenes/MultiplayerShootout.unity
+  - enabled: 0
+    path: Assets/Scenes/SplashScreen.unity

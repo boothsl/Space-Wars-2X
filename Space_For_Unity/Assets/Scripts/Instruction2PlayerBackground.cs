@@ -11,10 +11,14 @@ public class Instruction2PlayerBackground : MonoBehaviour {
 	public GUIContent content;
 	void OnGUI() {
 		GUI.TextArea(new Rect(Screen.width/2 - width/2, Screen.height/y, width, height), 
-		             "HOW TO PLAY\n\n" +
-		             "            Player 1         Player 2\n" +
-		             "Move        WASD           Arrow keys\n" +
-		             "Thrust      Shift               Shift\n" +
-		             "Fire        Spacebar            ?-key", maxLength, backgroundGuiStyle);
+		             "\n2 Player Flight Controls:\n\n\n" +
+		             "             - PLAYER 1 -     - PLAYER 2 -\n\n" +
+		             "Move        W A S D       Arrow Keys\n\n\n" +
+		             "Fire         Spacebar       RMB / LMB\n\n\n" +
+		             "Thrust     Left Shift        Right Shift\n\n\n" +
+		             "Brake      Left Shift        Right Shift\n\n\n",
+
+
+		             maxLength, backgroundGuiStyle);
 	}
 }
