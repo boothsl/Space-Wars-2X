@@ -49,10 +49,13 @@ public class SU_Spaceship : MonoBehaviour {
 	public Transform laserShotPrefab;
 	// Laser shot sound effect
 	public AudioClip soundEffectFire;
+	// Laser shot fire rate
+	public float fireRate = 0.1f;
+
 	
 	// Private variables
 	private Rigidbody _cacheRigidbody;
-	
+	private float nextFire = 0.0f;
 	
 	void Start () {		
 		// Ensure that the thrusters in the array have been linked properly
@@ -104,7 +107,7 @@ public class SU_Spaceship : MonoBehaviour {
 				_thruster.StartThruster();
 			}
 		}
-		if (Input.GetButtonDown(fire2_string)) {
+		/*if (Input.GetButtonDown(fire2_string)) {
 			// Iterate through each weapon mount point Vector3 in array
 			foreach (Vector3 _wmp in weaponMountPoints) {
 				// Calculate where the position is in world space for the mount point
@@ -119,6 +122,24 @@ public class SU_Spaceship : MonoBehaviour {
 			if (soundEffectFire != null) {
 				audio.PlayOneShot(soundEffectFire);
 
+			}
+		}*/
+		if (Input.GetButton (fire2_string) && Time.time > nextFire) {
+			nextFire = Time.time + fireRate;
+			// Iterate through each weapon mount point Vector3 in array
+			foreach (Vector3 _wmp in weaponMountPoints) {
+				// Calculate where the position is in world space for the mount point
+				Vector3 _pos = transform.position + transform.right * _wmp.x + transform.up * _wmp.y + transform.forward * _wmp.z;
+				// Instantiate the laser prefab at position with the spaceships rotation
+				Transform _laserShot = (Transform) Instantiate(laserShotPrefab, _pos, transform.rotation);
+				// Specify which transform it was that fired this round so we can ignore it for collision/hit
+				_laserShot.GetComponent<SU_LaserShot>().firedBy = transform;
+				
+			}
+			// Play sound effect when firing
+			if (soundEffectFire != null) {
+				audio.PlayOneShot(soundEffectFire);
+				
 			}
 		}
 		//Return to main menu on Escape (or other) key event

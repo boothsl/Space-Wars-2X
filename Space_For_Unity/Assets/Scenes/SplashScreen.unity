@@ -279,6 +279,26 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: .914111435
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 5fd579f3b7fa84ffcbcc54381b572506, type: 2}
+      propertyPath: boostForce
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 5fd579f3b7fa84ffcbcc54381b572506, type: 2}
+      propertyPath: boostForce
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 5fd579f3b7fa84ffcbcc54381b572506, type: 2}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 5fd579f3b7fa84ffcbcc54381b572506, type: 2}
+      propertyPath: is_menu_ship
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 5fd579f3b7fa84ffcbcc54381b572506, type: 2}
+      propertyPath: fireRate
+      value: .100000001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5fd579f3b7fa84ffcbcc54381b572506, type: 2}
   m_RootGameObject: {fileID: 1449831448}
@@ -4405,7 +4425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrusterForce: 50000
   inactiveThrusterForce: 5000
-  boostForce: 20000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!108 &1282540417
@@ -7119,7 +7139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   is_top_player: 1
-  is_menu_ship: 0
+  is_menu_ship: 1
   targetScene: SplashScreen
   thrusters:
   - {fileID: 1282540416}
@@ -7132,6 +7152,7 @@ MonoBehaviour:
   - {x: -8, y: 0, z: 5}
   laserShotPrefab: {fileID: 400000, guid: a7b21eb29c5551c4d91e99e6ee2b1854, type: 2}
   soundEffectFire: {fileID: 8300000, guid: 4b3f39ec7c7182d4684f4fe8cff00edf, type: 3}
+  fireRate: .100000001
 --- !u!54 &1449831452
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7143,7 +7164,7 @@ Rigidbody:
   m_Mass: 200
   m_Drag: 1
   m_AngularDrag: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -11113,7 +11134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrusterForce: 50000
   inactiveThrusterForce: 5000
-  boostForce: 20000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!82 &1888643979
