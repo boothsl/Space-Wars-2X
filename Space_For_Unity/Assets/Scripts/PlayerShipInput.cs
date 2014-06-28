@@ -18,9 +18,11 @@ public class PlayerShipInput : MonoBehaviour {
 	void Update () {
 		string fire1_string = "Fire1-bottom";
 		string fire2_string = "Fire2-bottom";
+		string fire3_string = "Fire3-bottom";
 		if (is_top_player) {
 			fire1_string = "Fire1-top";
 			fire2_string = "Fire2-top";
+			fire3_string = "Fire3-top";
 		}
 		
 		// Start all thrusters when pressing Fire 1
@@ -28,6 +30,7 @@ public class PlayerShipInput : MonoBehaviour {
 			foreach (SU_Thruster _thruster in _ship.thrusters) {
 				_thruster.StartThruster();
 			}
+			Debug.Log("Started thrusters");
 		}
 		// Stop all thrusters when releasing Fire 1
 		if (Input.GetButtonUp(fire1_string)) {		
@@ -35,7 +38,19 @@ public class PlayerShipInput : MonoBehaviour {
 				_thruster.StopThruster();
 			}
 		}
-		
+		// Boost all thrusters when pressing Fire 3
+		if (Input.GetButtonDown(fire3_string)) {		
+			foreach (SU_Thruster _thruster in _ship.thrusters) {
+				_thruster.BoostThruster();
+			}
+			Debug.Log("Pressed fire3 string");
+		}
+		// Unboost all thrusters when releasing Fire 3
+		if (Input.GetButtonUp(fire3_string)) {		
+			foreach (SU_Thruster _thruster in _ship.thrusters) {
+				_thruster.StartThruster();
+			}
+		}
 		if (Input.GetButtonDown(fire2_string)) {
 			_ship.FireMain();
 		}

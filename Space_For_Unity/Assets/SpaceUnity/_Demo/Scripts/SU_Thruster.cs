@@ -25,15 +25,18 @@ using System.Collections;
 public class SU_Thruster : MonoBehaviour {
 	// Force of individual thrusters
 	public float thrusterForce = 10000;
-	// Force of trusters when not active???
+	// Force of trusters when not active
 	public float inactiveThrusterForce = 5000;
+	//Force of thrusters when boosting
+	public float boostForce = 100000;
 	// Whether or not to add force at position which introduces torque, use with care...
 	public bool addForceAtPosition = false;
 	// Sound effect volume of thruster
 	public float soundEffectVolume = 1.0f;
 	
 	// Private variables
-	private bool _isActive = false;	
+	private bool _isActive = false;
+	private bool _isBoost = false;
 	private Transform _cacheTransform;
 	private Rigidbody _cacheParentRigidbody;
 	private Light _cacheLight;
@@ -42,15 +45,23 @@ public class SU_Thruster : MonoBehaviour {
 	// Call StartThruster() function from other scripts to start the thruster
 	public void StartThruster() {
 		// Set the thruster active flag to true
-		_isActive = true; 
+		_isActive = true;
+		_isBoost = false;
 	}
 	
 	// Call StopThruster() function from other scripts to stop the thruster
 	public void StopThruster() {
 		// Set the thruster active flag to false		
-		_isActive = false; 
+		_isActive = false;
+		_isBoost = false;
 	}
-	
+
+	// Call BoostThruster() function from other scripts to speed boost thruster 
+	public void BoostThruster() {
+		// Set the boost flag to false
+		_isBoost = true;
+		Debug.Log ("isBoost is true!");
+	}
 	void Start () {
 		// Cache the transform and parent rigidbody to improve performance
 		_cacheTransform = transform;
@@ -98,6 +109,9 @@ public class SU_Thruster : MonoBehaviour {
 			if (audio.volume < soundEffectVolume) {
 				// ...fade in the sound (to avoid clicks if just played straight away)
 				audio.volume += 5f * Time.deltaTime;
+				if (_isBoost) {
+					audio.volume += 10f * Time.deltaTime;
+				}
 			}
 			
 			// If the particle system is intact...
@@ -105,7 +119,12 @@ public class SU_Thruster : MonoBehaviour {
 				// Enable emission of thruster particles
 				_cacheParticleSystem.enableEmission = true;
 				_cacheParticleSystem.startLifetime = 2f;
-			}		
+				if (_isBoost) {
+					_cacheParticleSystem.enableEmission = true;
+					_cacheParticleSystem.startLifetime = 4f;
+				}
+			}
+
 		} else {
 			// The thruster is not active
 			if (audio.volume > 0.01f) {
@@ -137,6 +156,16 @@ public class SU_Thruster : MonoBehaviour {
 			} else {
 				// Add force without rotational torque
 				_cacheParentRigidbody.AddRelativeForce (Vector3.forward * thrusterForce);				
+			}
+			// If the booster's on
+			if (_isBoost) {
+				if (addForceAtPosition) {
+					// Add force relative to the position on the parent object which will also apply rotational torque
+					_cacheParentRigidbody.AddForceAtPosition (_cacheTransform.up * boostForce, _cacheTransform.position);
+				} else {
+					// Add force without rotational torque
+					_cacheParentRigidbody.AddRelativeForce (Vector3.forward * boostForce);				
+				}
 			}
 		}
 		// If thruster is inactive (in slow mode)...

@@ -72,9 +72,11 @@ public class SU_Spaceship : MonoBehaviour {
 	void Update () {
 		string fire1_string = "Fire1-bottom";
 		string fire2_string = "Fire2-bottom";
+		string fire3_string = "Fire3-bottom";
 		if (is_top_player) {
 			fire1_string = "Fire1-top";
 			fire2_string = "Fire2-top";
+			fire3_string = "Fire3-top";
 		}
 
 
@@ -90,7 +92,18 @@ public class SU_Spaceship : MonoBehaviour {
 				_thruster.StartThruster();
 			}
 		}
-		
+		// Boost all thrusters when pressing Fire 3
+		if (Input.GetButtonDown(fire3_string)) {		
+			foreach (SU_Thruster _thruster in thrusters) {
+				_thruster.BoostThruster();
+			}
+		}
+		// Unboost all thrusters when releasing Fire 3
+		if (Input.GetButtonUp(fire3_string)) {		
+			foreach (SU_Thruster _thruster in thrusters) {
+				_thruster.StartThruster();
+			}
+		}
 		if (Input.GetButtonDown(fire2_string)) {
 			// Iterate through each weapon mount point Vector3 in array
 			foreach (Vector3 _wmp in weaponMountPoints) {
