@@ -12,8 +12,9 @@ GameObject:
   - 65: {fileID: 6500000}
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
+  - 54: {fileID: 5400002}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: TrackingObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,6 +119,7 @@ GameObject:
   - 54: {fileID: 5400000}
   - 114: {fileID: 11400004}
   - 82: {fileID: 8200002}
+  - 114: {fileID: 11400008}
   m_Layer: 0
   m_Name: Spaceship
   m_TagString: Untagged
@@ -334,6 +336,21 @@ Rigidbody:
   m_Mass: 200
   m_Drag: 1
   m_AngularDrag: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &5400002
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -699,11 +716,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01cabe0668c35884983ae68e23110fa4, type: 3}
+  m_Script: {fileID: 11500000, guid: e847aa351c4caff4ab006a4724577e7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseAimObject: {fileID: 400000}
-  crosshairTexture: {fileID: 2800000, guid: fc1432381446fa84a8b50451f36a736a, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -717,7 +732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrusterForce: 50000
   inactiveThrusterForce: 5000
-  boostForce: 20000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!114 &11400004
@@ -732,7 +747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   is_top_player: 1
-  is_menu_ship: 0
+  is_menu_ship: 1
   targetScene: SplashScreen
   thrusters:
   - {fileID: 11400002}
@@ -745,6 +760,7 @@ MonoBehaviour:
   - {x: -8, y: 0, z: 5}
   laserShotPrefab: {fileID: 400000, guid: a7b21eb29c5551c4d91e99e6ee2b1854, type: 2}
   soundEffectFire: {fileID: 8300000, guid: 4b3f39ec7c7182d4684f4fe8cff00edf, type: 3}
+  fireRate: .100000001
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -758,9 +774,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrusterForce: 50000
   inactiveThrusterForce: 5000
-  boostForce: 20000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01cabe0668c35884983ae68e23110fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseAimObject: {fileID: 400000}
+  crosshairTexture: {fileID: 2800000, guid: fc1432381446fa84a8b50451f36a736a, type: 3}
+  targetDirection: {x: 0, y: 0, z: 0}
+  targetSpeed: 0
+  projectileSpeed: 200
+  maxDegreeRotation: 30
+  paused: 0
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
