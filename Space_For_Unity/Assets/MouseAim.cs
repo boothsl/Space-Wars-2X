@@ -4,8 +4,12 @@ using System.Collections;
 public class MouseAim : MonoBehaviour {
 	[SerializeField] Transform mouseAimObject;
 	[SerializeField] Texture2D crosshairTexture;
+
+	private GUITexture crosshair;
 	// Use this for initialization
 	void Start () {
+		Screen.showCursor = false;
+		crosshair.texture = crosshairTexture;
 	}
 	
 	// Update is called once per frame
@@ -22,13 +26,16 @@ public class MouseAim : MonoBehaviour {
 	{
 		Vector3 mousePos = Event.current.mousePosition;
 		
-		mousePos.x = Mathf.Clamp(mousePos.x, 300, 1200);
-		mousePos.y = Mathf.Clamp(mousePos.y, 150, 800);
+		mousePos.x = Mathf.Clamp(mousePos.x, Screen.width/Screen.width, Screen.width);
+		mousePos.y = Mathf.Clamp(mousePos.y, Screen.height/Screen.height, Screen.height);
+
 		
-		GUI.DrawTexture(new Rect( mousePos.x - (crosshairTexture.width/2),
-		                      mousePos.y - (crosshairTexture.height/2),
-		                      crosshairTexture.width,
-		                      crosshairTexture.height), crosshairTexture);
+
+		GUI.DrawTexture(new Rect( mousePos.x - ((Screen.width / 20) / 2),
+		                      mousePos.y -  ((Screen.width / 20) / 2),
+		                      Screen.width / 20,
+		                      Screen.width / 20), 
+		                	  crosshairTexture);
 	}
 
 
