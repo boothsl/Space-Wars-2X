@@ -16,11 +16,11 @@ public class CreditsGUI : MonoBehaviour {
 		             "Howard DeCastro\n" +
 		             "Chris Hull\n" +
 		             "Stephanie Booth\n" +
+		             "Akhilesh Patel\n" +
+		             "Martin Smith\n" +
 
 	//	             maxLength, backgroundGuiStyle);
 
-		             "Martin Smith \n" +
-		             "Akhilesh \n" +
 		             "John Thomas\n" +
 		             "Alan McCosh\n" +
 		             "Tyler Gregg\n" +

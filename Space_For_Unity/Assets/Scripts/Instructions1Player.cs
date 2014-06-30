@@ -11,12 +11,14 @@ public class Instructions1Player : MonoBehaviour {
 	
 	public GUIContent content;
 	void OnGUI() {
-		GUI.TextArea(new Rect(Screen.width/2 - width/2, Screen.height/y, width, height), 
+		GUI.TextArea(new Rect(Screen.width/2 - width/2, Screen.height/y, width, height),
+
 		             "\nFlight Controls:\n\n" +
 		             "\nMove . . . . . Mouse\n\n" +
-		             "Fire . . . . RMB / LMB\n\n" +
-		             "Thrust . . . . Right Shift\n\n" +
-		             "Brake . . . . Right Shift\n\n" +
+		             "Fire . . . . . . . . RMB\n\n" +
+		             "Thrust . . . . . . Return\n\n" +
+		             "Brake . . . . Right Shift\n\n\n" +
+
 		             "** Press Space to Begin **", maxLength, backgroundGuiStyle);
 	}
 }
