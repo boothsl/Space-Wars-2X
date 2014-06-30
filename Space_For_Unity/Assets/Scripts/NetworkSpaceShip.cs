@@ -50,9 +50,12 @@ public class NetworkSpaceShip : MonoBehaviour {
 	public Transform laserShotPrefab;
 	// Laser shot sound effect
 	public AudioClip soundEffectFire;
+	// Gap between auto-fire rounds.
+	public float fireRate = 0.1f;
 	
 	// Private variables
 	private Rigidbody _cacheRigidbody;
+	private float	nextFire = 0.0f;
 	
 	
 	void Start () {		
@@ -81,21 +84,34 @@ public class NetworkSpaceShip : MonoBehaviour {
 
 		string fire1_string = "NP-fire1";
 		string fire2_string = "NP-fire2";
+		string fire3_string = "NP-fire3";
 
-		// Start all thrusters when pressing Fire 1
+		// Stop all thrusters when pressing Fire 1
 		if (Input.GetButtonDown(fire1_string)) {		
-			foreach (SU_Thruster _thruster in thrusters) {
-				_thruster.StartThruster();
-			}
-		}
-		// Stop all thrusters when releasing Fire 1
-		if (Input.GetButtonUp(fire1_string)) {		
 			foreach (SU_Thruster _thruster in thrusters) {
 				_thruster.StopThruster();
 			}
 		}
-		
-		if (Input.GetButtonDown(fire2_string)) {
+		// Start all thrusters when releasing Fire 1
+		if (Input.GetButtonUp(fire1_string)) {		
+			foreach (SU_Thruster _thruster in thrusters) {
+				_thruster.StartThruster();
+			}
+		}
+		// Boost all thrusters when pressing Fire 3
+		if (Input.GetButtonDown(fire3_string)) {		
+			foreach (SU_Thruster _thruster in thrusters) {
+				_thruster.BoostThruster();
+			}
+		}
+		// Unboost all thrusters when releasing Fire 3
+		if (Input.GetButtonUp(fire3_string)) {		
+			foreach (SU_Thruster _thruster in thrusters) {
+				_thruster.StartThruster();
+			}
+		}		
+		if (Input.GetButton(fire2_string) && Time.time > nextFire) {
+			nextFire = Time.time + fireRate;
 			// Itereate through each weapon mount point Vector3 in array
 			foreach (Vector3 _wmp in weaponMountPoints) {
 				// Calculate where the position is in world space for the mount point

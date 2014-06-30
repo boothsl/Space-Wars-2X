@@ -4,8 +4,9 @@ using System.Collections;
 public class GlobalGameState : MonoBehaviour {
 
 	static public HostData ServerLocation = null;
-	static public bool IsRunningServer = false;
+	static public bool IsRunningServer = true; // Default to True to allow easy debugging.
 	static public string GameRoomName = System.Environment.MachineName;
+	static public int MinimumNumberOfPlayers = 1; // Default to 1 to allow easy debugging.
 
 	// This is the callback that all weapons call when it makes a hit on a
 	// player (this event happens only when we're the server).

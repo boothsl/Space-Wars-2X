@@ -11,7 +11,7 @@ public class MouseAim : MonoBehaviour {
 	[SerializeField] float projectileSpeed = 200.0f; //World units
 	[SerializeField] float maxDegreeRotation = 30.0f;
 
-	public bool paused;
+	private bool isRunning = true;
 	// Use this for initialization
 	void Start () {
 		Screen.showCursor = false;
@@ -19,7 +19,7 @@ public class MouseAim : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-				if (!paused)
+				if (!isRunning)
 						return;
 			
 				targetDirection = mouseAimObject.transform.forward;
@@ -57,7 +57,7 @@ public class MouseAim : MonoBehaviour {
 	}
 
 	void OnApplicationFocus(bool focusStatus) {
-			paused = focusStatus;
+			isRunning = focusStatus;
 		}
 
 }

@@ -82,7 +82,7 @@ public class ServerEntryView : MonoBehaviour {
 			if (((Player)players[i]).state != PlayerState.kReady)
 				return;
 		}
-		if (players.Count <= 1) return; // Need 2 players to start
+		if (players.Count < GlobalGameState.MinimumNumberOfPlayers) return; // Need 2 players to start
 		OnAllPlayersAreReady(new System.EventArgs());
 	}
 
@@ -213,7 +213,7 @@ public class ServerEntryView : MonoBehaviour {
 		}
 
 		// Draw the overall state of the game...
-		if (players.Count <= 1) // No one entered yet
+		if (players.Count < GlobalGameState.MinimumNumberOfPlayers) // No one entered yet
 		{
 			GUI.TextArea( 
 			    new Rect( width * 0.3f, height * 0.35f, width * 0.4f, height * 0.1f ),
