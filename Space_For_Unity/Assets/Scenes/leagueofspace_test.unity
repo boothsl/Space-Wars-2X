@@ -1650,6 +1650,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 50000
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!108 &75904388
@@ -4463,6 +4465,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 0
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!108 &170511315
@@ -5890,7 +5894,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 189660513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -531.601074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1435050107}
@@ -6620,6 +6624,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 50000
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!108 &322674070
@@ -7818,6 +7824,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 0
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!108 &357779261
@@ -10868,6 +10876,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 50000
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!108 &514236718
@@ -14937,6 +14947,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 50000
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!82 &578772905
@@ -18052,6 +18064,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 50000
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!82 &688521478
@@ -19250,6 +19264,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 0
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!82 &703386771
@@ -23261,7 +23277,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: .600000024
+      scalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -23276,7 +23292,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .333333313
+          value: .100000001
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -24313,6 +24329,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 50000
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!1 &935147883
@@ -25586,6 +25604,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 50000
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!1001 &991778004
@@ -28907,6 +28927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 50000
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!82 &1099492565
@@ -29178,6 +29200,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 50000
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!108 &1154119848
@@ -30434,6 +30458,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 0
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!108 &1156934813
@@ -31680,6 +31706,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 0
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!108 &1174910553
@@ -34043,6 +34071,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 0
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!82 &1217980647
@@ -34148,6 +34178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 0
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!108 &1220160229
@@ -35483,6 +35515,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 0
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!108 &1282430526
@@ -36681,6 +36715,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 50000
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!108 &1286112462
@@ -37927,6 +37963,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 50000
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!198 &1293981398
@@ -37947,7 +37985,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: .600000024
+      scalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -37962,7 +38000,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .333333313
+          value: .100000001
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -40255,6 +40293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 50000
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!82 &1305988552
@@ -40614,6 +40654,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 0
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!108 &1410713234
@@ -43849,6 +43891,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 50000
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!82 &1462388618
@@ -43945,6 +43989,8 @@ Transform:
   - {fileID: 402046612}
   - {fileID: 1293981396}
   - {fileID: 928988745}
+  - {fileID: 1942424367}
+  - {fileID: 1709271958}
   m_Father: {fileID: 189660514}
 --- !u!111 &1464332375
 Animation:
@@ -45642,6 +45688,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 0
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!82 &1525060913
@@ -46248,6 +46296,69 @@ Prefab:
   m_RootGameObject: {fileID: 1442587422}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1709271957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 66f6414ccb9d392448b3dce81fec6626, type: 2}
+  m_PrefabInternal: {fileID: 2091521765}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1709271958}
+  - 108: {fileID: 1709271959}
+  m_Layer: 0
+  m_Name: Point light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1709271958
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 66f6414ccb9d392448b3dce81fec6626, type: 2}
+  m_PrefabInternal: {fileID: 2091521765}
+  m_GameObject: {fileID: 1709271957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 26.2832947, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1464332374}
+--- !u!108 &1709271959
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 10800004, guid: 66f6414ccb9d392448b3dce81fec6626,
+    type: 2}
+  m_PrefabInternal: {fileID: 2091521765}
+  m_GameObject: {fileID: 1709271957}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 72.5500031
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_Softness: 4
+    m_SoftnessFade: 1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_ActuallyLightmapped: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_ShadowSamples: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_IndirectIntensity: 1
+  m_AreaSize: {x: 1, y: 1}
 --- !u!1 &1711294367
 GameObject:
   m_ObjectHideFlags: 0
@@ -46843,6 +46954,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 0
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!108 &1906924372
@@ -49278,6 +49391,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 50000
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!108 &1936884602
@@ -50524,6 +50639,69 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
   m_OcclusionCulling: 1
+--- !u!1 &1942424366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100012, guid: 66f6414ccb9d392448b3dce81fec6626, type: 2}
+  m_PrefabInternal: {fileID: 2091521765}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1942424367}
+  - 108: {fileID: 1942424368}
+  m_Layer: 0
+  m_Name: Point light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1942424367
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400012, guid: 66f6414ccb9d392448b3dce81fec6626, type: 2}
+  m_PrefabInternal: {fileID: 2091521765}
+  m_GameObject: {fileID: 1942424366}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15, y: 1, z: -100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1464332374}
+--- !u!108 &1942424368
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 10800006, guid: 66f6414ccb9d392448b3dce81fec6626,
+    type: 2}
+  m_PrefabInternal: {fileID: 2091521765}
+  m_GameObject: {fileID: 1942424366}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Type: 2
+  m_Color: {r: .134136766, g: .0594723187, b: .323529422, a: 1}
+  m_Intensity: 1
+  m_Range: 263.5
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_Softness: 4
+    m_SoftnessFade: 1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_ActuallyLightmapped: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_ShadowSamples: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_IndirectIntensity: 1
+  m_AreaSize: {x: 1, y: 1}
 --- !u!1 &1969170313
 GameObject:
   m_ObjectHideFlags: 0
@@ -52288,7 +52466,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2042897430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1124.35913}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 719062195}
@@ -53543,6 +53721,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 0
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!1001 &2059041191

@@ -14,9 +14,9 @@ public class Instruction2PlayerBackground : MonoBehaviour {
 		             "\n2 Player Flight Controls:\n\n\n" +
 		             "             - PLAYER 1 -     - PLAYER 2 -\n\n" +
 		             "Move        W A S D       Arrow Keys\n\n\n" +
-		             "Fire         Spacebar       RMB / LMB\n\n\n" +
-		             "Thrust     Left Shift        Right Shift\n\n\n" +
-		             "Brake      Left Shift        Right Shift\n\n\n",
+		             "Fire          Spacebar              Ctrl\n\n\n" +
+		             "Thrust      Left Shift        Right Shift\n\n\n" +
+		             "Brake       Left Shift        Right Shift\n\n\n",
 
 
 		             maxLength, backgroundGuiStyle);
