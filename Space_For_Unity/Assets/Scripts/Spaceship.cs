@@ -137,14 +137,18 @@ public class Spaceship : MonoBehaviour {
 
 				// Instantiate the laser prefab at position with the spaceships rotation
 				Transform _laserShot;
+				bool isLocal = false;
 				if (!is_menu_ship) {
 					_laserShot = (Transform) Network.Instantiate(laserShotPrefab, _pos, transform.rotation, 0);
 				}
 				else { 
 					_laserShot = (Transform) GameObject.Instantiate(laserShotPrefab, _pos, transform.rotation);
+					isLocal = true;
 				}
 				// Specify which transform it was that fired this round so we can ignore it for collision/hit
-				_laserShot.GetComponent<LaserShot>().firedBy = transform;
+				LaserShot shot = _laserShot.GetComponent<LaserShot>();
+				shot.firedBy = transform;
+				shot.isLocal = isLocal;
 				
 			}
 			// Play sound effect when firing

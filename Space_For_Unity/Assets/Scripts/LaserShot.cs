@@ -40,6 +40,9 @@ public class LaserShot : MonoBehaviour {
 	public Transform explosionEffect;
 	// "Fired By" Reference to ignore collision detection for the ship that fired the laser
 	public Transform firedBy {get; set;}
+
+	// Set this to true if you want to process local "kills"
+	public bool isLocal { get; set; }
 	
 	// Private variables
 	private Vector3 _velocity;
@@ -80,18 +83,21 @@ public class LaserShot : MonoBehaviour {
 					// Instantiate the imapct effect at impact position
 					Instantiate(impactEffect, _hit.point, _rotation);
 
-					// Trigger the hit on the server
-					GlobalGameState.OnHitObject(
-						this, 
-						new GlobalGameState.HitObjectArgs() { hitStrength = 1, hitRaycast = _hit, weaponObject = this.transform, explosionEffect = this.explosionEffect } );
-
-					// If random number is a small value...
-					//if (Random.Range(0,20) < 2) {
-						// Instantiate the explosion effect at the point of impact
-					//	Instantiate(explosionEffect, _hit.transform.position, _rotation);
-						// Destroy the game object that we just hit
-					//	Destroy(_hit.transform.gameObject);
-					//}
+					if (!isLocal)
+					{
+						// Trigger the hit on the server
+						GlobalGameState.OnHitObject(
+							this, 
+							new GlobalGameState.HitObjectArgs() { hitStrength = 1, hitRaycast = _hit, weaponObject = this.transform, explosionEffect = this.explosionEffect } );
+					} else {
+						// If random number is a small value...
+						if (Random.Range(0,20) < 2) {
+							// Instantiate the explosion effect at the point of impact
+							Instantiate(explosionEffect, _hit.transform.position, _rotation);
+							// Destroy the game object that we just hit
+							Destroy(_hit.transform.gameObject);
+						}
+					}
 
 					// Destroy the laser shot game object (on the client too)
 					Destroy(gameObject);
