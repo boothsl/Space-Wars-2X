@@ -29,7 +29,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class NetworkLaserShot : MonoBehaviour {	
+public class LaserShot : MonoBehaviour {	
 	// Default life of laser beam
 	public float life = 2.0f;
 	// Default velocity of laser beam

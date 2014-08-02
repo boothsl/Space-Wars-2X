@@ -8,7 +8,7 @@ public class MultiplayerController : MonoBehaviour {
 
 	public ServerEntryView view;
 	public ScoreBoard scoreBoard;
-	public NetworkGameOver gameOverScreen;
+	public GameOver gameOverScreen;
 
 	public int StartPointStartCircleSize = 500;
 

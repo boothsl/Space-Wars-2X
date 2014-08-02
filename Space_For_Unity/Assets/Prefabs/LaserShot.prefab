@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 148: {fileID: 14800000}
   m_Layer: 0
-  m_Name: NetworkLaserShot
+  m_Name: LaserShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

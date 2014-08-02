@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿/* commented out because I broke it, uses an older spaceship controller -Chris
+ * 
+ * using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -176,3 +178,4 @@ public class Minion : MonoBehaviour {
 		enemies.Remove(otherChar);
 	}
 }
+*/

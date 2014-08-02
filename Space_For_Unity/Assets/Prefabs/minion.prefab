@@ -532,6 +532,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBase: {fileID: 0}
+  _ship: {fileID: 0}
+  _followTarget: {fileID: 0}
+  _isFiring: 0
+  _rigidBody: {fileID: 0}
+  enemies: []
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -544,6 +549,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 50000
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!114 &11400006
@@ -558,6 +565,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusterForce: 0
+  inactiveThrusterForce: 5000
+  boostForce: 100000
   addForceAtPosition: 0
   soundEffectVolume: 1
 --- !u!135 &13500000

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NetworkGameOver : MonoBehaviour {
+public class GameOver : MonoBehaviour {
 
 	public string winner = "no one";
 
