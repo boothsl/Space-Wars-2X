@@ -71,6 +71,24 @@ public class NetworkSpaceShip : MonoBehaviour {
 		if (_cacheRigidbody == null) {
 			Debug.LogError("Spaceship has no rigidbody - the thruster scripts will fail. Add rigidbody component to the spaceship.");
 		}
+
+		if (GlobalGameState.MainRadar != null)
+		{
+			if (networkView.isMine)
+			{
+				GlobalGameState.MainRadar.AddRadarBlip(
+					this.gameObject,
+					Color.yellow,
+					0.5f);
+			}
+			else
+			{
+				GlobalGameState.MainRadar.AddRadarBlip(
+					this.gameObject,
+					Color.red,
+					0.5f);
+			}
+		}
 	}
 	
 	void Update () {
@@ -202,6 +220,12 @@ public class NetworkSpaceShip : MonoBehaviour {
 		{
 			// Invoke the event on the controller to respawn me.
 			GlobalGameState.OnPlayerDied (this, new System.EventArgs());
+		}
+
+		// Remove this object from the radar, it will be re-added with a respawn
+		if (GlobalGameState.MainRadar != null)
+		{
+			GlobalGameState.MainRadar.RemoveRadarBlip(gameObject);
 		}
 	}
 }

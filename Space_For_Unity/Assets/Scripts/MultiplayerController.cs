@@ -18,6 +18,8 @@ public class MultiplayerController : MonoBehaviour {
 
 	public string SplashScreenLevelName = "SplashScreen";
 
+	public RadarSystem Radar;
+
 	bool IsGameOver = false;
 	string winner = string.Empty;
 
@@ -28,6 +30,9 @@ public class MultiplayerController : MonoBehaviour {
 
 	void Start()
 	{
+		// Save this globally so remote generated objects have access to it.
+		GlobalGameState.MainRadar = Radar;
+
 		// Entry point to the level
 		if (Server)
 		{
@@ -185,6 +190,12 @@ public class MultiplayerController : MonoBehaviour {
 		// TODO: Need to make this more generic.
 		CameraObjectToAttachPlayer.GetComponent<SU_CameraFollow>().target = player.transform;
 		CameraObjectToAttachPlayer.GetComponent<RotateCamera>().lookAtObj = player.transform;
+		if (Radar != null)
+		{
+			Radar.transform.parent.gameObject.SetActive(true);
+			Radar.StartMe(player);
+		}
+
 		return player;
 	}
 
