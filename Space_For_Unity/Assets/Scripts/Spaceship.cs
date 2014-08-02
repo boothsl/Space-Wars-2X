@@ -37,7 +37,7 @@ public class Spaceship : MonoBehaviour {
 
 	public string targetScene;
 	// Array of thrusters attached to the spaceship
-	public SU_Thruster[] thrusters;
+	public Thruster[] thrusters;
 	// Specify the roll rate (multiplier for rolling the ship when steering left/right)	
 	public float rollRate = 100.0f;
 	// Specify the yaw rate (multiplier for rudder/steering the ship when steering left/right)
@@ -60,7 +60,7 @@ public class Spaceship : MonoBehaviour {
 	
 	void Start () {		
 		// Ensure that the thrusters in the array have been linked properly
-		foreach (SU_Thruster _thruster in thrusters) {
+		foreach (Thruster _thruster in thrusters) {
 			if (_thruster == null) {
 				Debug.LogError("Thruster array not properly configured. Attach thrusters to the game object and link them to the Thrusters array.");
 			}			
@@ -106,25 +106,25 @@ public class Spaceship : MonoBehaviour {
 
 		// Stop all thrusters when pressing Fire 1
 		if (Input.GetButtonDown(brake_string)) {		
-			foreach (SU_Thruster _thruster in thrusters) {
+			foreach (Thruster _thruster in thrusters) {
 				_thruster.StopThruster();
 			}
 		}
 		// Start all thrusters when releasing Fire 1
 		if (Input.GetButtonUp(brake_string)) {		
-			foreach (SU_Thruster _thruster in thrusters) {
+			foreach (Thruster _thruster in thrusters) {
 				_thruster.StartThruster();
 			}
 		}
 		// Boost all thrusters when pressing Fire 3
 		if (Input.GetButtonDown(boost_string)) {		
-			foreach (SU_Thruster _thruster in thrusters) {
+			foreach (Thruster _thruster in thrusters) {
 				_thruster.BoostThruster();
 			}
 		}
 		// Unboost all thrusters when releasing Fire 3
 		if (Input.GetButtonUp(boost_string)) {		
-			foreach (SU_Thruster _thruster in thrusters) {
+			foreach (Thruster _thruster in thrusters) {
 				_thruster.StartThruster();
 			}
 		}		
