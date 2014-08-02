@@ -15,7 +15,7 @@ public class RotateCamera : MonoBehaviour {
 	void Update () {
 		transform.RotateAround (lookAtObj.position, Vector3.up, rotateSpeed * Time.deltaTime);
 		if (Input.anyKeyDown) {
-			SU_CameraFollow followScript = (SU_CameraFollow)GetComponent(typeof(SU_CameraFollow));
+			CameraFollow followScript = (CameraFollow)GetComponent(typeof(CameraFollow));
 			followScript.enabled = true;
 			RotateCamera rotateScript = (RotateCamera)GetComponent(typeof(RotateCamera));
 			rotateScript.enabled = false;

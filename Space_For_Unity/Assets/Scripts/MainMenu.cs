@@ -11,8 +11,8 @@ public class MainMenu : MonoBehaviour {
 	public GUIStyle startGuiStyle;
 	//public GUIStyle menuOptionStyle;
 
-	public GameObject instructionsP1;
-	public GameObject instructions;
+	//public GameObject instructionsP1;
+	public GameObject controls;
 	public GameObject credits;
 	public GameObject startServerGUI;
 	public GameObject startClientGUI;
@@ -23,7 +23,7 @@ public class MainMenu : MonoBehaviour {
 		float hh = height / 2;
 		if (GUI.Button(new Rect(x - hw, y - hh, width, height), text, the_style)) {
 			switch(action) {
-			case 0:
+			/*case 0:
 				if (instructionsP1.activeInHierarchy){
 					instructionsP1.SetActive(false);
 				}
@@ -35,16 +35,24 @@ public class MainMenu : MonoBehaviour {
 				break;
 			case 1:
 				Application.LoadLevel(targetScene);
+				break;*/
+			case 0:
+				startServerGUI.SetActive(true);
+				this.enabled = false;
+				break;
+			case 1:
+				startClientGUI.SetActive(true);
+				this.enabled = false;
 				break;
 			case 2:
-				if (instructions.activeInHierarchy) {
-					instructions.SetActive(false);
+				if (controls.activeInHierarchy) {
+					controls.SetActive(false);
 				}
 				else {
-					instructions.SetActive(true);
+					controls.SetActive(true);
 				}
 
-				instructionsP1.SetActive(false);
+				//instructionsP1.SetActive(false);
 				credits.SetActive(false);
 				break;
 			case 3:
@@ -54,18 +62,12 @@ public class MainMenu : MonoBehaviour {
 				else {
 					credits.SetActive(true);
 				}
-				instructions.SetActive(false);
-				instructionsP1.SetActive(false);
+				controls.SetActive(false);
+				//instructionsP1.SetActive(false);
 				break;
-			case 4:
-				startServerGUI.SetActive(true);
-				this.enabled = false;
-				break;
-			case 5:
-				startClientGUI.SetActive(true);
-				this.enabled = false;
-				break;
+
 			}
+
 		}
 
 	}
@@ -74,11 +76,12 @@ public class MainMenu : MonoBehaviour {
 		float width = Screen.width;
 		float height = Screen.height;
 
-		CreateButton (width / 4f, height * 0.65f, button_width, button_height, "1-Player", startGuiStyle, 0);
-		CreateButton (width / 4f, height * 0.80f, button_width, button_height, "2-Player", startGuiStyle, 1);
-		CreateButton (width * 3f / 4f, height * 0.65f, button_width, button_height, "How to Play", startGuiStyle, 2);
-		CreateButton (width * 3f / 4f, height * 0.8f, button_width, button_height, "Credits", startGuiStyle, 3);
-		CreateButton (width / 4f, height * 0.95f, button_width, button_height, "Start Server", startGuiStyle, 4);
-		CreateButton (width * 3f / 4f, height * 0.95f, button_width, button_height, "Join Server", startGuiStyle, 5);
+		//CreateButton (width / 4f, height * 0.65f, button_width, button_height, "1-Player", startGuiStyle, 0);
+		//CreateButton (width / 4f, height * 0.80f, button_width, button_height, "2-Player", startGuiStyle, 1);
+		CreateButton (width / 2f, height * 0.45f, button_width, button_height, "Single Player", startGuiStyle, 0);
+		CreateButton (width / 2f, height * 0.60f, button_width, button_height, "Multiplayer", startGuiStyle, 1);
+		CreateButton (width * 7f / 8f, height * 0.75f, button_width, button_height, "Controls", startGuiStyle, 2);
+		CreateButton (width * 7f / 8f, height * 0.90f, button_width, button_height, "Credits", startGuiStyle, 3);
+
 	}
 }

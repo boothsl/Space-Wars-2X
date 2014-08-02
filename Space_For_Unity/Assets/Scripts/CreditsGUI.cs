@@ -11,7 +11,7 @@ public class CreditsGUI : MonoBehaviour {
 	
 	public GUIContent content;
 	void OnGUI() {
-		GUI.TextArea(new Rect(Screen.width/2 - width/2, Screen.height/y, width, height), 
+		GUI.TextArea(new Rect(0, Screen.height/y, width, height), 
 		             "\nCredits:\n\n" +
 		             "Howard DeCastro\n" +
 		             "Chris Hull\n" +
