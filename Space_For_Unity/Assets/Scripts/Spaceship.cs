@@ -163,6 +163,8 @@ public class Spaceship : MonoBehaviour {
 	{
 		syncTime += Time.deltaTime;
 		rigidbody.position = Vector3.Lerp (syncStartPosition, syncEndPosition, syncTime/syncDelay);
+		rigidbody.rotation = syncCurrentRotation;
+		rigidbody.angularVelocity = syncCurrentAngVelocity;
 	}
 
 	void FixedUpdate () {
@@ -189,12 +191,15 @@ public class Spaceship : MonoBehaviour {
 	private float syncTime = 0.0f;
 	private Vector3 syncStartPosition = Vector3.zero;
 	private Vector3 syncEndPosition = Vector3.zero;
+	private Quaternion syncCurrentRotation = Quaternion.identity;
+	private Vector3 syncCurrentAngVelocity = Vector3.zero;
 	
 	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
 	{
 		Vector3 syncPosition = Vector3.zero;
 		Vector3 syncVelocity = Vector3.zero;
 		Quaternion rotation = Quaternion.identity;
+		Vector3 angVelocity = Vector3.zero;
 		if (stream.isWriting)
 		{
 			syncPosition = rigidbody.position;
@@ -205,12 +210,16 @@ public class Spaceship : MonoBehaviour {
 
 			rotation = rigidbody.rotation;
 			stream.Serialize(ref rotation);
+
+			angVelocity = rigidbody.angularVelocity;
+			stream.Serialize(ref angVelocity);
 		}
 		else
 		{
 			stream.Serialize(ref syncPosition);
 			stream.Serialize(ref syncVelocity);
 			stream.Serialize(ref rotation);
+			stream.Serialize(ref angVelocity);
 			//stream.Serialize(ref forward);
 			//stream.Serialize(ref up);
 			
@@ -221,7 +230,8 @@ public class Spaceship : MonoBehaviour {
 			syncEndPosition = syncPosition + syncVelocity*syncDelay;
 			syncStartPosition = rigidbody.position;
 
-			rigidbody.rotation = rotation;
+			syncCurrentRotation = rotation;
+			syncCurrentAngVelocity = angVelocity;
 		}
 	}
 
